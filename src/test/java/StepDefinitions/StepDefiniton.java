@@ -20,6 +20,8 @@ public class StepDefiniton {
 	@Given("Open chrome with given URL")
 	public void open_chrome_with_given_url() throws InterruptedException {
 	    // Write code here that turns the phrase above into concrete actions
+		try {
+		
         WebDriverManager.chromedriver().setup();
 
 		WebDriver driver = new ChromeDriver();
@@ -38,12 +40,7 @@ public class StepDefiniton {
 
 	        // log(Status, details)
 	        test.log(Status.INFO, "This step shows usage of log(status, details)");
-		try {
 			Thread.sleep(3000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
 		driver.findElement(By.xpath("//input[@name='password']")).sendKeys("admin123");
 		driver.findElement(By.xpath("//button[@type='submit']")).click();
 		test.log(Status.INFO, "This step shows usage of log(status, details)");
@@ -52,7 +49,7 @@ public class StepDefiniton {
 		Thread.sleep(2000);
 		
 		test.log(Status.INFO, "This step shows usage of log(status, details)");
-		driver.findElement(By.xpath("//button[normalize-space()='Add']")).click();
+//		driver.findElement(By.xpath("//button[normalize-space()='Add']")).click();
 		Thread.sleep(2000);
 		
 		
@@ -60,6 +57,10 @@ public class StepDefiniton {
 		extent.flush();
 		driver.quit();
 		
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
 		
 		
