@@ -5,9 +5,23 @@
 	<groupId>Orange_HRM</groupId>
 	<artifactId>Orange_HRM</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<build>
+    <plugins>
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <version>3.13.0</version>
+            <configuration>
+                <source>17</source>
+                <target>17</target>
+            </configuration>
+        </plugin>
+    </plugins>
+</build>
 	<dependencies>
 		<!--
 		https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+		
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
 			<artifactId>selenium-java</artifactId>
@@ -44,10 +58,6 @@
 			<version>7.23.0</version>
 			<scope>test</scope>
 		</dependency>
-		<dependency>
-			<groupId>BDD_Cucumber</groupId>
-			<artifactId>Selenium_BDD_Cucumber</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-		</dependency>
+	
 	</dependencies>
 </project>
